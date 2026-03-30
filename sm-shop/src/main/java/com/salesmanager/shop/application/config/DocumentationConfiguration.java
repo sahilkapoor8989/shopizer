@@ -42,10 +42,10 @@ public class DocumentationConfiguration {
 
 	public static final Contact DEFAULT_CONTACT = new Contact("Shopizer", "https://www.shopizer.com", "");
 	
-	private static final String HOST = "localhost:8080";
+	private static final String HOST = "localhost:30080";
 
 	/**
-	 * http://localhost:8080/swagger-ui.html#/ http://localhost:8080/v2/api-docs
+	 * http://localhost:30080/swagger-ui.html#/ http://localhost:8080/v2/api-docs
 	 */
 
 	@Bean
