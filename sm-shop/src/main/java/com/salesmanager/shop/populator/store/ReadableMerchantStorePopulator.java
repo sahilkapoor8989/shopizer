@@ -141,6 +141,7 @@ public class ReadableMerchantStorePopulator extends
 		target.setId(source.getId());
 		target.setInBusinessSince(DateUtil.formatDate(source.getInBusinessSince()));
 		target.setUseCache(source.isUseCache());
+		target.setAnnouncement(source.getAnnouncement());
 
 		if(!CollectionUtils.isEmpty(source.getLanguages())) {
 			List<ReadableLanguage> supported = new ArrayList<ReadableLanguage>();

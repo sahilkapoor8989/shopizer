@@ -34,6 +34,7 @@ public class MerchantStoreEntity implements Serializable {
 	private boolean retailer;
 	private MeasureUnit dimension;
 	private WeightUnit weight;
+	private String announcement;
 	
 
 	public int getId() {
@@ -148,5 +149,12 @@ public class MerchantStoreEntity implements Serializable {
 		this.retailer = retailer;
 	}
 
+	public String getAnnouncement() {
+		return announcement;
+	}
+
+	public void setAnnouncement(String announcement) {
+		this.announcement = announcement;
+	}
 
 }

@@ -183,6 +183,9 @@ public class MerchantStore extends SalesManagerEntity<Integer, MerchantStore> im
 	@Column(name = "CURRENCY_FORMAT_NATIONAL")
 	private boolean currencyFormatNational;
 
+	@Column(name = "ANNOUNCEMENT", length = 255)
+	private String announcement;
+
 	public MerchantStore() {
 	}
 
@@ -422,6 +425,14 @@ public class MerchantStore extends SalesManagerEntity<Integer, MerchantStore> im
 
 	public void setRetailer(Boolean retailer) {
 		this.retailer = retailer;
+	}
+
+	public String getAnnouncement() {
+		return announcement;
+	}
+
+	public void setAnnouncement(String announcement) {
+		this.announcement = announcement;
 	}
 
 }

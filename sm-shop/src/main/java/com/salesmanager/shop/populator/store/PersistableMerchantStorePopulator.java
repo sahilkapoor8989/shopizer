@@ -83,6 +83,7 @@ public class PersistableMerchantStorePopulator extends AbstractDataPopulator<Per
 		target.setStoreEmailAddress(source.getEmail());
 		target.setUseCache(source.isUseCache());
 		target.setRetailer(source.isRetailer());
+		target.setAnnouncement(source.getAnnouncement());
 		
 		//get parent store
 		if(!StringUtils.isBlank(source.getRetailerStore())) {
