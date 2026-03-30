@@ -1,7 +1,6 @@
 package com.salesmanager.core.business.services.search;
 
-import java.io.File;
-import java.nio.file.Files;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -510,10 +509,9 @@ public class SearchServiceImpl implements com.salesmanager.core.business.service
 	
 	public String loadClassPathResource(String file) throws Exception {
 		Resource res = new ClassPathResource(file);
-		File f = res.getFile();
-		
-		return new String(
-			      Files.readAllBytes(f.toPath()));
+		try (InputStream is = res.getInputStream()) {
+			return new String(is.readAllBytes());
+		}
 	}
 
 }
